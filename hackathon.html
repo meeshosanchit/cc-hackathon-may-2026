@@ -49,7 +49,7 @@
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     }
   </style>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head>
 <body class="pb-24">
 <!-- BEGIN: MainHeader -->
 <header class="bg-white px-5 pt-8 pb-4 rounded-b-3xl shadow-sm" data-purpose="user-profile-header">
@@ -64,20 +64,23 @@
 <p class="text-sm font-semibold text-slate-500">Level 6</p>
 </div>
 </div>
-<div class="bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-custom" data-purpose="tier-badge">
-<span class="text-xs font-bold text-amber-700 uppercase tracking-wider">Gold Tier</span>
+<div class="bg-[#FFD700] border border-[#E6C200] px-3 py-1.5 rounded-custom flex items-center gap-1.5 shadow-sm" data-purpose="tier-badge">
+<span class="material-symbols-outlined text-[14px] text-amber-900 font-bold">crown</span>
+<span class="text-xs font-bold text-amber-900 uppercase tracking-wider">Gold Tier</span>
+<button aria-label="Tier info" class="flex items-center ml-0.5">
+<span class="material-symbols-outlined text-[14px] text-amber-800">help</span>
+</button>
 </div>
 </div>
 <!-- XP Progress Bar -->
 <div class="space-y-2" data-purpose="daily-streak-xp">
 <div class="flex justify-between items-end">
-<span class="text-xs font-bold text-brand uppercase tracking-tighter">Daily Streak</span>
+<span class="text-xs font-bold text-brand uppercase tracking-tighter">Current XP Progress</span>
 <span class="text-lg font-extrabold text-slate-800">1250 <span class="text-xs font-medium text-slate-400">XP</span></span>
 </div>
 <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
 <div class="h-full progress-gradient w-[65%] rounded-full"></div>
 </div>
-<p class="text-[10px] text-slate-400 font-medium">100 XP = ₹1 equivalent</p>
 </div>
 </header>
 <!-- END: MainHeader -->
@@ -89,7 +92,7 @@
 <button class="text-brand text-xs font-bold uppercase">View All</button>
 </div>
 <div class="calendar-grid text-[10px] font-bold text-slate-400 uppercase mb-3">
-<span>M</span><span>T</span><span>W</span><span>Th</span><span>F</span><span>Sat</span><span>S</span>
+<span class="">M</span><span class="">T</span><span class="">W</span><span class="">Th</span><span class="">F</span><span class="">Sat</span><span class="">S</span>
 </div>
 <div class="calendar-grid text-sm font-semibold text-slate-700">
 <!-- Placeholder empty slots for Monday/Tuesday start -->
@@ -102,7 +105,7 @@
 <span class="py-2">5</span>
 <span class="py-2">6</span>
 <div class="py-2 relative flex flex-col items-center">
-<span>7</span>
+<span class="">7</span>
 <span class="absolute -bottom-2 text-[8px] text-purple-600 font-bold whitespace-nowrap">• Holi</span>
 </div>
 <span class="py-2">8</span>
@@ -110,29 +113,45 @@
 <span class="py-2">10</span>
 <div class="py-2 relative flex flex-col items-center col-span-2 bg-pink-50 rounded-md border border-pink-100">
 <span class="text-slate-800">11-12</span>
-<span class="text-[7px] text-brand font-bold uppercase">Maha Saving Sale</span>
+<span class="text-[7px] text-brand font-bold uppercase">Maha Weekend Sale</span>
 </div>
 </div>
 </section>
 <!-- END: CalendarSection -->
 <!-- BEGIN: WeeklyStreak -->
 <section class="bg-white p-5 rounded-custom shadow-card" data-purpose="weekly-streak-timeline">
-<h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Weekly Streak</h2>
-<div class="relative flex items-center justify-between px-2">
-<!-- Timeline Line -->
-<div class="absolute h-0.5 bg-slate-100 left-4 right-4 top-1/2 -translate-y-1/2 -z-0"></div>
-<div class="absolute h-0.5 progress-gradient left-4 w-1/2 top-1/2 -translate-y-1/2 -z-0"></div>
-<!-- Nodes -->
-<div class="z-10 w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs border-4 border-white shadow-sm">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+<h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Weekly Progress</h2>
+<div class="relative flex items-center justify-between px-2"><!-- Timeline Line -->
+<div class="absolute h-0.5 bg-slate-100 left-4 right-4 top-1/2 -translate-y-4 -z-0"></div>
+<div class="absolute h-0.5 progress-gradient left-4 w-[33%] top-1/2 -translate-y-4 -z-0"></div>
+<!-- Node 1: Completed -->
+<div class="flex flex-col items-center gap-2 z-10">
+<div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white border-4 border-white shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
-<div class="z-10 w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs border-4 border-white shadow-sm ring-2 ring-brand/20">
-<div class="w-2 h-2 bg-white rounded-full"></div>
+<span class="text-[10px] font-bold text-slate-800">+100XP</span>
 </div>
-<div class="z-10 w-6 h-6 rounded-full bg-slate-200 border-4 border-white"></div>
-<div class="z-10 w-6 h-6 rounded-full bg-slate-200 border-4 border-white"></div>
-<div class="z-10 w-6 h-6 rounded-full bg-slate-200 border-4 border-white"></div>
+<!-- Node 2: Completed (Active) -->
+<div class="flex flex-col items-center gap-2 z-10">
+<div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white border-4 border-white shadow-sm ring-2 ring-brand/20">
+<span class="material-symbols-outlined text-sm font-bold" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
+<span class="text-[10px] font-bold text-slate-800">+150XP</span>
+</div>
+<!-- Node 3: Pending -->
+<div class="flex flex-col items-center gap-2 z-10">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-400 border-4 border-white">
+<span class="material-symbols-outlined text-sm font-bold">star</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400">+200XP</span>
+</div>
+<!-- Node 4: Pending -->
+<div class="flex flex-col items-center gap-2 z-10">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-400 border-4 border-white">
+<span class="material-symbols-outlined text-sm font-bold">star</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400">+250XP</span>
+</div></div>
 </section>
 <!-- END: WeeklyStreak -->
 <!-- BEGIN: DailyChallenges -->
@@ -178,26 +197,81 @@
 </section>
 <!-- END: DailyChallenges -->
 <!-- BEGIN: PersonalManager -->
-<section class="bg-gradient-to-r from-slate-900 to-slate-800 p-5 rounded-custom shadow-lg text-white" data-purpose="personal-manager-section">
-<h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Personal Manager</h2>
-<div class="flex items-center justify-between gap-4">
+<h2 class="text-lg font-bold text-slate-800 mb-4 uppercase tracking-widest">Personal Manager</h2><section class="bg-gradient-to-r from-slate-900 to-slate-800 p-5 rounded-custom shadow-lg text-white" data-purpose="personal-manager-section"><!-- Header Row -->
+<div class="flex items-center justify-between gap-4 mb-4">
 <div class="flex-1">
-<p class="text-xs text-slate-400 mb-1">Upcoming Recommendations</p>
+<p class="text-xs text-slate-400 mb-0.5">Recommendations</p>
 <div class="flex items-center gap-2">
-<span class="text-sm font-bold truncate">Premium Silk Saree</span>
-<span class="px-1.5 py-0.5 bg-brand/20 text-brand text-[8px] font-bold rounded">HOT</span>
+<span class="text-sm font-bold truncate">Premium Collection</span>
+<span class="material-symbols-outlined text-brand text-[16px] leading-none" style='font-variation-settings: "FILL" 1;'>local_fire_department</span>
 </div>
-<p class="text-[10px] text-slate-500 italic">Holi upcoming collection...</p>
+<p class="text-[10px] text-slate-500 italic">Holi upcoming</p>
 </div>
 <button class="bg-brand hover:bg-pink-600 transition-colors text-white text-xs font-bold px-4 py-2.5 rounded-custom shadow-lg shadow-brand/20 whitespace-nowrap">
-          Order Now
-        </button>
+    Order Now
+  </button>
 </div>
-</section>
+<!-- Horizontal Product Catalog -->
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide -mx-1 px-1">
+<!-- Product Item 1 -->
+<div class="flex-none w-36 bg-white rounded-lg p-2 flex flex-col gap-1.5">
+<div class="aspect-square rounded-md overflow-hidden bg-slate-100">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFFapG-s-qijerygHDZX2Q2mi068Fzh3i90ZgVc3gi90f-oMnJwBMgOMwXZeO-LkkQbWtKCmeFweRDjChLBxyuofTL_T3w8I31IHxvXRn3sUpS5CGrNpAT5V5L-uobexMMzfqfTsJSM350SmcDPluO7_S5QQlgHwSdBWGR03DAHJz6rfY52QESOzbq-j1EVilkXrIh9fvMKrfBazq7J9aNv3oksAbAh7QtKB6GNE-PRk8rbWqBVt01BydyP7Xm3mUhzDo8WQKKzw"/>
+</div>
+<div class="px-0.5">
+<h3 class="text-[10px] font-bold text-slate-800 truncate">Royal Sherwani</h3>
+<div class="flex items-center gap-1">
+<span class="text-xs font-extrabold text-slate-900">₹284</span>
+<span class="text-[8px] font-bold text-green-600">10% off</span>
+</div>
+<div class="mt-1 flex items-center">
+<div class="bg-green-700 text-white text-[8px] font-bold px-1 py-0.5 rounded flex items-center gap-0.5">
+          4.2 <span class="material-symbols-outlined text-[8px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="flex-none w-36 bg-white rounded-lg p-2 flex flex-col gap-1.5">
+<div class="aspect-square rounded-md overflow-hidden bg-slate-100">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbLE0SlXgVJ7sNHJho5NgV8MLuV6rTdyLsIrHF3oWRT0SuO48GxD3DrlZTjfCdWbMCV6cJdjvjRE-n3lmTWoksllXlnwY3URIq7JnbGAUJBcUtKG6WUgZSmFOsscnnumEudhVl_Z3tAQRc08zQshfZ5whpoZnxxPo1iHBrqaKzq21xnvDkiiDPOFIaoTTWWOrFz3tRRR7-aUNCXIi621Jtzg1HzGmDFI6O4giNlbR1EFfGBCRePWcy9WuOfi7aaJyl-jAtosBC4A"/>
+</div>
+<div class="px-0.5">
+<h3 class="text-[10px] font-bold text-slate-800 truncate">Designer Anarkali</h3>
+<div class="flex items-center gap-1">
+<span class="text-xs font-extrabold text-slate-900">₹383</span>
+<span class="text-[8px] font-bold text-green-600">10% off</span>
+</div>
+<div class="mt-1 flex items-center">
+<div class="bg-green-700 text-white text-[8px] font-bold px-1 py-0.5 rounded flex items-center gap-0.5">
+          4.1 <span class="material-symbols-outlined text-[8px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Item 3 -->
+<div class="flex-none w-36 bg-white rounded-lg p-2 flex flex-col gap-1.5">
+<div class="aspect-square rounded-md overflow-hidden bg-slate-100">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH3vcTStmzOk_WoLmF1K8i75E1zjGG0BkjMyhzznmvgzOIkyXiXFuqqq_wxfYLWDZU6ZMvl_R86LIOSrFY_Ae7OgOTW_iZ1VN4T1pm3ZGvhl8A2G-KQpCSryq-buOQhh8QBQrvE8ntvN-qYShpPHyQbPGer_Rl7JbteAkyW_35MNcqyE9o1Y9mjMtR0AZrkODWwg87EpDBmIBaEaKtOKSqSNmdd7Urwn59-Xw9CqM7hoZ_vXEaRTTo6MV7AUPqUcrEGh1YZWeMLA"/>
+</div>
+<div class="px-0.5">
+<h3 class="text-[10px] font-bold text-slate-800 truncate">Banarasi Silk</h3>
+<div class="flex items-center gap-1">
+<span class="text-xs font-extrabold text-slate-900">₹164</span>
+<span class="text-[8px] font-bold text-green-600">9% off</span>
+</div>
+<div class="mt-1 flex items-center">
+<div class="bg-green-700 text-white text-[8px] font-bold px-1 py-0.5 rounded flex items-center gap-0.5">
+          4.1 <span class="material-symbols-outlined text-[8px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
 <!-- END: PersonalManager -->
 <!-- BEGIN: ReturnProduct -->
 <section class="bg-white p-5 rounded-custom shadow-card border border-slate-100" data-purpose="return-product-section">
-<h2 class="text-sm font-bold text-slate-800 mb-4">Return Product</h2>
+<h2 class="text-sm font-bold text-slate-800 mb-4">Return Products</h2>
 <div class="flex flex-col gap-4">
 <div class="flex justify-between items-start">
 <div>
@@ -210,8 +284,7 @@
 </div>
 </div>
 <button class="w-full py-3 border-2 border-slate-200 text-slate-600 text-xs font-bold rounded-custom hover:bg-slate-50 active:scale-[0.98] transition-all">
-          Place Return Request
-        </button>
+          Place Return</button>
 </div>
 </section>
 <!-- END: ReturnProduct -->
